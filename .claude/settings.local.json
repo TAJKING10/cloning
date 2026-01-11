@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python format_html.py:*)",
+      "Bash(python parse_nav.py:*)",
+      "Bash(python find_all_links.py:*)",
+      "Bash(python:*)",
+      "Bash(find:*)"
+    ]
+  }
+}
