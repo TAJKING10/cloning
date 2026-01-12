@@ -5,7 +5,9 @@
       "Bash(python parse_nav.py:*)",
       "Bash(python find_all_links.py:*)",
       "Bash(python:*)",
-      "Bash(find:*)"
+      "Bash(find:*)",
+      "Bash(ls:*)",
+      "Bash(python3:*)"
     ]
   }
 }
