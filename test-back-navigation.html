@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Test Back Navigation</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 900px;
+            margin: 50px auto;
+            padding: 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        .container {
+            background: white;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+        }
+        h1 {
+            color: #333;
+            margin-bottom: 30px;
+        }
+        .step {
+            background: #f8f9fa;
+            padding: 20px;
+            margin: 20px 0;
+            border-left: 5px solid #667eea;
+            border-radius: 5px;
+        }
+        .step h3 {
+            margin-top: 0;
+            color: #667eea;
+        }
+        .link {
+            display: inline-block;
+            margin: 15px 10px;
+            padding: 15px 30px;
+            background: #667eea;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-size: 16px;
+            transition: all 0.3s;
+        }
+        .link:hover {
+            background: #5568d3;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+        }
+        .link.french {
+            background: #0055A4;
+        }
+        .link.french:hover {
+            background: #003d7a;
+        }
+        .link.italian {
+            background: #009246;
+        }
+        .link.italian:hover {
+            background: #007335;
+        }
+        .success {
+            background: #d4edda;
+            border-left-color: #28a745;
+            color: #155724;
+        }
+        code {
+            background: #e9ecef;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-family: 'Courier New', monospace;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🔄 Test Back Navigation - Language Switcher</h1>
+
+        <div class="step">
+            <h3>Step 1: Start Here (This Page)</h3>
+            <p>This is your starting point. Click the French link below to simulate going to a French page.</p>
+            <a href="sabourg.org/www.sabourg.org/communique-de-presse-du-22-avril-2025/pope-5678517_1280/index.html" class="link french">
+                🇫🇷 Go to French Page (Press Release)
+            </a>
+        </div>
+
+        <div class="step">
+            <h3>Step 2: On the French Page</h3>
+            <p>Once you're on the French page, scroll down and click <strong>"Versione italiana"</strong> (Italian Version).</p>
+            <p>This will take you to the Italian site.</p>
+        </div>
+
+        <div class="step success">
+            <h3>Step 3: Return Back</h3>
+            <p>On the Italian page, click <strong>"Version française"</strong> (French Version).</p>
+            <p>✅ <strong>It will now use <code>history.back()</code> to take you back to the exact French page you came from!</strong></p>
+            <p>You'll return to: <code>communique-de-presse-du-22-avril-2025/pope-5678517_1280/index.html</code></p>
+        </div>
+
+        <div class="step">
+            <h3>📝 What Changed?</h3>
+            <p><strong>Before:</strong> Version française link pointed to <code>https://www.sabourg.org/</code> (homepage only)</p>
+            <p><strong>After:</strong> Version française link now uses <code>javascript:history.back()</code></p>
+            <p><strong>Result:</strong> Returns you to the previous page you were on, regardless of which French page it was!</p>
+        </div>
+
+        <div class="step">
+            <h3>🎯 Test It Yourself:</h3>
+            <p>Click the link below to go to the Italian site, then try the "Version française" link:</p>
+            <a href="https___www.sabourg.it_/www.sabourg.it/home/padregiovanni-jpeg-3-3/index.html" class="link italian">
+                🇮🇹 Go Directly to Italian Site
+            </a>
+            <p><small>(Then click "Version française" to return here)</small></p>
+        </div>
+    </div>
+</body>
+</html>
