@@ -1,0 +1,4 @@
+# HTTrack Website Copier Cookie File
+# This file format is compatible with Netscape cookies
+www.sabourg.sbs	TRUE	/	FALSE	1999999999	_lscache_vary	ac96d3303b140888369dd9fd984fcc34
+

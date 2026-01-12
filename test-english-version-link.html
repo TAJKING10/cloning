@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Test English Version Navigation</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 900px;
+            margin: 50px auto;
+            padding: 20px;
+            background: linear-gradient(135deg, #C8102E 0%, #012169 100%);
+        }
+        .container {
+            background: white;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+        }
+        h1 {
+            color: #012169;
+            margin-bottom: 30px;
+        }
+        .step {
+            background: #f8f9fa;
+            padding: 20px;
+            margin: 20px 0;
+            border-left: 5px solid #012169;
+            border-radius: 5px;
+        }
+        .step h3 {
+            margin-top: 0;
+            color: #012169;
+        }
+        .link {
+            display: inline-block;
+            margin: 15px 10px;
+            padding: 15px 30px;
+            background: #012169;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-size: 16px;
+            transition: all 0.3s;
+        }
+        .link:hover {
+            background: #C8102E;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(1, 33, 105, 0.4);
+        }
+        .link.french {
+            background: #0055A4;
+        }
+        .link.french:hover {
+            background: #003d7a;
+        }
+        .link.english {
+            background: #C8102E;
+        }
+        .link.english:hover {
+            background: #a00d24;
+        }
+        .success {
+            background: #d4edda;
+            border-left-color: #28a745;
+            color: #155724;
+        }
+        code {
+            background: #e9ecef;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-family: 'Courier New', monospace;
+            font-size: 13px;
+        }
+        .path {
+            background: #fff3cd;
+            padding: 10px;
+            border-radius: 5px;
+            margin: 10px 0;
+            font-size: 12px;
+            color: #856404;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🇬🇧 Test English Version Navigation</h1>
+
+        <div class="step">
+            <h3>What Was Fixed?</h3>
+            <p><strong>Before:</strong> Clicking "English version" sent you to <code>https://www.sabourg.sbs/</code> (external website)</p>
+            <p><strong>After:</strong> Now it points to your specific local file <code>file:///C:/Users/Toufi/.../https___www.sabourg.sbs_/www.sabourg.sbs/index0ba2.html</code></p>
+        </div>
+
+        <div class="step success">
+            <h3>✅ Files Updated</h3>
+            <p><strong>131 HTML files</strong> in the French site were updated:</p>
+            <ul>
+                <li><strong>Root level files:</strong> Use <code>../../https___www.sabourg.sbs_/www.sabourg.sbs/index0ba2.html</code></li>
+                <li><strong>1-level deep files:</strong> Use <code>../../../https___www.sabourg.sbs_/www.sabourg.sbs/index0ba2.html</code></li>
+                <li><strong>2-level deep files:</strong> Use <code>../../../../https___www.sabourg.sbs_/www.sabourg.sbs/index0ba2.html</code></li>
+            </ul>
+        </div>
+
+        <div class="step">
+            <h3>🧪 Test It Now:</h3>
+            <p><strong>Step 1:</strong> Click below to go to the French page you mentioned:</p>
+            <a href="sabourg.org/www.sabourg.org/communique-de-presse-du-22-avril-2025/pope-5678517_1280/index.html" class="link french">
+                🇫🇷 Go to French Page (Press Release - Pope)
+            </a>
+
+            <p><strong>Step 2:</strong> On that page, scroll down and click "English version" in the language menu.</p>
+
+            <p><strong>Step 3:</strong> It should now take you to <code>index0ba2.html</code> in the English site!</p>
+        </div>
+
+        <div class="step">
+            <h3>📍 Direct Test Link:</h3>
+            <p>Or click directly to test the English site target file:</p>
+            <a href="https___www.sabourg.sbs_/www.sabourg.sbs/index0ba2.html" class="link english">
+                🇬🇧 Open English Site (index0ba2.html)
+            </a>
+        </div>
+
+        <div class="step">
+            <h3>🔍 Verification:</h3>
+            <div class="path">
+                <strong>Starting from:</strong><br>
+                <code>file:///C:/Users/Toufi/.../sabourg.org/www.sabourg.org/communique-de-presse-du-22-avril-2025/pope-5678517_1280/index.html</code>
+                <br><br>
+                <strong>Click "English version" → Should navigate to:</strong><br>
+                <code>file:///C:/Users/Toufi/.../https___www.sabourg.sbs_/www.sabourg.sbs/index0ba2.html</code>
+                <br><br>
+                ✅ <strong>Relative path used:</strong> <code>../../../../https___www.sabourg.sbs_/www.sabourg.sbs/index0ba2.html</code>
+                <br><br>
+                <small>(Goes up 4 levels from pope-5678517_1280 folder to reach touficjandah folder, then down to the English site)</small>
+            </div>
+        </div>
+
+        <div class="step success">
+            <h3>🎉 Summary</h3>
+            <p>All "English version" links in the French site (<code>sabourg.org</code>) now correctly point to your local English site's <code>index0ba2.html</code> file instead of the external website!</p>
+        </div>
+
+        <div class="step">
+            <h3>📋 Complete Language Navigation Setup:</h3>
+            <p>Your site navigation is now fully configured:</p>
+            <ul>
+                <li>✅ <strong>French → Italian:</strong> Points to local <code>index0c0a.html</code></li>
+                <li>✅ <strong>Italian → French:</strong> Uses <code>history.back()</code> to return to previous page</li>
+                <li>✅ <strong>French → English:</strong> Points to local <code>index0ba2.html</code></li>
+                <li>✅ <strong>Italian → Sabourg.com:</strong> Points to local Sabourg.com mirror</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
