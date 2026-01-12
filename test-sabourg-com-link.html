@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Test Sabourg.com Navigation</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 900px;
+            margin: 50px auto;
+            padding: 20px;
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+        }
+        .container {
+            background: white;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+        }
+        h1 {
+            color: #1e3c72;
+            margin-bottom: 30px;
+        }
+        .step {
+            background: #f8f9fa;
+            padding: 20px;
+            margin: 20px 0;
+            border-left: 5px solid #2a5298;
+            border-radius: 5px;
+        }
+        .step h3 {
+            margin-top: 0;
+            color: #2a5298;
+        }
+        .link {
+            display: inline-block;
+            margin: 15px 10px;
+            padding: 15px 30px;
+            background: #2a5298;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-size: 16px;
+            transition: all 0.3s;
+        }
+        .link:hover {
+            background: #1e3c72;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(42, 82, 152, 0.4);
+        }
+        .link.italian {
+            background: #009246;
+        }
+        .link.italian:hover {
+            background: #007335;
+        }
+        .link.sabourg-com {
+            background: #d4b65b;
+        }
+        .link.sabourg-com:hover {
+            background: #c0a548;
+        }
+        .success {
+            background: #d4edda;
+            border-left-color: #28a745;
+            color: #155724;
+        }
+        code {
+            background: #e9ecef;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-family: 'Courier New', monospace;
+            font-size: 13px;
+        }
+        .path {
+            background: #fff3cd;
+            padding: 10px;
+            border-radius: 5px;
+            margin: 10px 0;
+            font-size: 12px;
+            color: #856404;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>📰 Test Sabourg.com Navigation</h1>
+
+        <div class="step">
+            <h3>What Was Fixed?</h3>
+            <p><strong>Before:</strong> Clicking "Sabourg.com" in the Italian site sent you to <code>https://www.sabourg.com/it</code> (external website)</p>
+            <p><strong>After:</strong> Now it points to your local mirror <code>file:///C:/Users/Toufi/AndroidStudioProjects/touficjandah/https___www.sabourg.com_/www.sabourg.com/index.html</code></p>
+        </div>
+
+        <div class="step success">
+            <h3>✅ Files Updated</h3>
+            <p><strong>90 HTML files</strong> in the Italian site were updated:</p>
+            <ul>
+                <li><strong>Root level files:</strong> Use <code>../../https___www.sabourg.com_/</code></li>
+                <li><strong>1-level deep files:</strong> Use <code>../../../https___www.sabourg.com_/</code></li>
+                <li><strong>2-level deep files:</strong> Use <code>../../../../https___www.sabourg.com_/</code></li>
+            </ul>
+        </div>
+
+        <div class="step">
+            <h3>🧪 Test It Now:</h3>
+            <p><strong>Step 1:</strong> Click below to go to the Italian site page you mentioned:</p>
+            <a href="https___www.sabourg.it_/www.sabourg.it/home/padregiovanni-jpeg-3-3/index.html" class="link italian">
+                🇮🇹 Go to Italian Site (padregiovanni page)
+            </a>
+
+            <p><strong>Step 2:</strong> On that page, look for the menu "Comunicazione" → "Sabourg.com" and click it.</p>
+
+            <p><strong>Step 3:</strong> It should now take you to your local Sabourg.com site!</p>
+        </div>
+
+        <div class="step">
+            <h3>📍 Direct Test Link:</h3>
+            <p>Or click directly to test the Sabourg.com local site:</p>
+            <a href="https___www.sabourg.com_/www.sabourg.com/index.html" class="link sabourg-com">
+                📰 Open Sabourg.com (Local Mirror)
+            </a>
+        </div>
+
+        <div class="step">
+            <h3>🔍 Verification:</h3>
+            <div class="path">
+                <strong>Expected behavior from:</strong><br>
+                <code>file:///C:/Users/Toufi/.../https___www.sabourg.it_/www.sabourg.it/home/padregiovanni-jpeg-3-3/index.html</code>
+                <br><br>
+                <strong>Click "Sabourg.com" → Should navigate to:</strong><br>
+                <code>file:///C:/Users/Toufi/.../https___www.sabourg.com_/www.sabourg.com/index.html</code>
+                <br><br>
+                ✅ <strong>Relative path used:</strong> <code>../../../../https___www.sabourg.com_/www.sabourg.com/index.html</code>
+            </div>
+        </div>
+
+        <div class="step success">
+            <h3>🎉 Summary</h3>
+            <p>All "Sabourg.com" links in the Italian site (<code>https___www.sabourg.it_</code>) now correctly point to your local Sabourg.com mirror instead of the external website!</p>
+        </div>
+    </div>
+</body>
+</html>
